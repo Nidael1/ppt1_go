@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+if [ -f go.mod ]; then
+  go vet ./...
+  go test ./...
+fi
+if [ -f web/package.json ]; then
+  cd web
+  npx vue-tsc -b
+  npx vitest run --passWithNoTests
+fi

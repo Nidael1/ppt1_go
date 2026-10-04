@@ -1,0 +1,19 @@
+# Binario
+server
+server.exe
+
+# Frontend build
+web/dist/
+web/node_modules/
+
+# Datos locales
+marcador.json
+
+# Go
+*.test
+*.out
+
+# IDEs
+.idea/
+.vscode/
+*.swp

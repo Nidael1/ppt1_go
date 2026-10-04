@@ -1,0 +1,8 @@
+#!/bin/sh
+msg=$(head -n 1 "$1")
+if ! echo "$msg" | grep -Eq '^\[sprint [0-9]+\.[0-9]+\]\[(issue #[0-9]+|meta)\] .+'; then
+  echo "Formato inválido. Usa:"
+  echo "  [sprint N.N][issue #N] descripción"
+  echo "  [sprint N.N][meta] descripción"
+  exit 1
+fi
